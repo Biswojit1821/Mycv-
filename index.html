@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Biswojit CV Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap"
+      rel="stylesheet"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"/>
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico?v=2" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+    <style media="screen">
+      @media (max-width: 1024px) {
+        html,
+        body {
+          overflow-x: hidden;
+        }
+
+        body {
+          position: relative;
+        }
+      }
+
+      html,
+      body {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+      }
+
+      body {
+        margin: 0; /* Remove bs from user agent stylesheet */
+        text-align: center;
+        color: #000000;
+        font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+        background-image: linear-gradient(
+          #c9ebff,
+          #abb5ff,
+          #7475b6,
+          #459092,
+          #000000
+        );
+      }
+
+      h1 {
+        font-size: 5.625rem; /* 5.625 x 16px (rem) == 16px = 100% = 1em (inherited from body) */
+        margin: 50px auto 0 auto;
+        font-family: "Titillium Web";
+      }
+
+      @media (min-width: 320px) {
+        /* smartphones, iPhone, portrait 480x320 phones */
+        h1 {
+          margin: 82px auto 0 auto;
+        }
+
+        .bottom-cloud {
+          top: 449px;
+        }
+      }
+
+      h2 {
+        font-family: "Titillium Web";
+        font-weight: normal;
+        padding-bottom: 10px;
+      }
+
+      .font-size-title {
+        font-size: 45px;
+      }
+
+      h3 {
+        font-family: "Titillium Web";
+      }
+
+      p {
+        line-height: 2;
+      }
+
+      .bg-light {
+        background-color: #ed953e !important;
+      }
+
+      hr {
+        border: dotted #ed953e 6px;
+        border-bottom: none;
+        width: 4%;
+        margin: 100px auto;
+      }
+
+      a {
+        color: black;
+        font-family: "Titillium Web";
+        text-decoration: none;
+      }
+
+      .link-margin-footer {
+        margin: 10px 20px;
+      }
+
+      a:hover {
+        color: purple;
+      }
+
+      .creativity-text {
+        color: #ed953e;
+      }
+
+      /**
+      * Contact button styles
+      */
+      .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-image: linear-gradient(#f7da6c, #faaa00);
+        border: none;
+        color: #000000;
+        border-radius: 40px;
+        text-align: center;
+        font-size: 20px;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        vertical-align: middle;
+        position: relative;
+        bottom: 34px;
+        text-transform: uppercase;
+      }
+
+      .button:hover {
+        background-image: linear-gradient(180deg, #f7da6c, #faaa00);
+      }
+
+      .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+
+      .button span:after {
+        content: "\00bb";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+      }
+
+      .button:hover span {
+        padding-right: 25px;
+      }
+
+      .button:hover span:after {
+        opacity: 1;
+        right: 0;
+      }
+
+      .top-container {
+        position: relative;
+        padding-top: 100px;
+      }
+
+      .middle-container {
+      }
+
+      .bottom-container {
+        background-image: linear-gradient(#f7da6c, #faaa00);
+        color: black;
+        padding: 50px 0 20px;
+      }
+
+      .skill-row {
+        width: 50%;
+        margin: 100px auto 100px auto;
+        text-align: left;
+      }
+
+      .pro {
+        text-decoration: underline;
+      }
+
+      .intro {
+        width: 80%;
+        margin: 20px auto 0px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        p.intro {
+          width: 30%;
+          margin: 20px auto 0px;
+        }
+      }
+
+      .contact-message {
+        width: 40%;
+        margin: 40px auto 60px;
+      }
+
+      .copyright {
+        color: #0000000;
+        font-size: 0.75rem;
+        padding: 20px 0;
+      }
+
+      .top-cloud {
+        position: absolute;
+        right: 300px;
+        top: 40px;
+      }
+
+      .bottom-cloud {
+        position: absolute;
+        left: 250px;
+        bottom: 300px;
+      }
+
+      .last-cloud {
+        width: 350px;
+        height: 350px;
+      }
+
+      .icon-circle-foundations {
+        width: 200px;
+        float: left; /* Left right effect */
+        margin-right: 30px;
+      }
+
+      div.div-programming-skills-node-text {
+        position: relative;
+        top: -20px;
+      }
+
+      /* Desktop node text */
+      @media screen and (min-width: 1024px) {
+        div.div-programming-skills-node-text {
+          position: relative;
+          top: 40px;
+        }
+      }
+
+      img {
+        transition: all 0.5s;
+        z-index: 2;
+      }
+
+      img:hover {
+        transform: scale(1.2) rotate(360deg);
+      }
+
+      .icon-circle {
+        width: 200px;
+        border-radius: 200px;
+        position: relative;
+      }
+
+      .img-float-left {
+        float: left; /* Left right effect */
+        margin-right: 30px;
+      }
+
+      .img-float-right {
+        float: right;
+        margin-left: 30px;
+      }
+
+      .white-text {
+        color: white;
+      }
+
+      /* Typewriter animation */
+      .line-1 {
+        position: relative;
+        top: 10px;
+        width: 24em;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255, 255, 255, 0.75);
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        font-size: 25px;
+        transform: translateY(-25%);
+      }
+
+      /* Animation */
+      .anim-typewriter {
+        animation: typewriter 0.5s steps(44) 1s 1 normal both,
+          blinkTextCursor 500ms steps(44) infinite normal;
+      }
+      @keyframes typewriter {
+        from {
+          width: 0;
+        }
+        to {
+          width: 4.5em;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: rgba(255, 255, 255, 0.75);
+        }
+        to {
+          border-right-color: transparent;
+        }
+      }
+
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Biswojit</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#aboutme">About me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Me</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- div = content division, content in boxes/groups -->
+    <div class="top-container" data-aos="zoom-in">
+      <img
+        class="top-cloud d-none d-lg-block"
+        src="cloud.png"
+        alt="cloud-img"
+      />
+      <h1>I'm Biswojit.</h1>
+      <br />
+      <h2>Web Developer.</h2>
+      <h2>AI Building.</h2>
+      <h2 class="creativity-text line-1 anim-typewriter">Creativity.</h2>
+      <img class="bottom-cloud" src="cloud.png" alt="cloud-img" />
+      <img
+        class="last-cloud"
+        src="aii.gif"
+        alt="mountain-img"
+      />
+      <hr />
+    </div>
+
+    <div class="middle-container sexy-linear-gradients">
+      <div class="profile" data-aos="flip-left" id="aboutme">
+        <!-- Profile pic -->
+        <h2 class="font-size-title">About me.</h2>
+
+        <img
+          class="icon-circle image-fluid"
+          src="biswojit.jpeg"
+          alt="biswojit's pic"
+        />
+        <p class="intro">
+          Hi! I'm Biswojit and I'm a Full-stack Developer who likes making websites. In my free time I like to develop new AI.
+          I used to dream to be  Successfull person in my life and to become a AI developer from child-hood. I believe in AI more than human species .
+          MY hobby is to Watch space-exploration Movies, listen to Songs , Book reading i think enough. I always like to stay alone one type of lonely soul.
+          I always make friends who never break my trust. Enough.
+        </p>
+      </div>
+      <hr />
+      <div class="skills" data-aos="fade-right">
+        <h2 id="skills" class="font-size-title">My Skills.</h2>
+        <div class="skill-row white-text">
+          <img
+            class="icon-circle-foundations img-fluid"
+            src="html-css-js.png"
+            alt=""
+          />
+
+          <h3>HTML5, CSS3, and JavaScript</h3>
+          <p>
+            With HTML5 I mainly work with semantic tags and BEM notation to keep
+            my code clean. To visualise and animate certain things aesthetically
+            I use CSS3 and I'm currently learning how to work with Node js. I
+            Java script is important for front end .
+          </p>
+        </div>
+
+        <div class="skill-row white-text" data-aos="fade-left">
+          <img
+            class="icon-circle-foundations icon-circle img-float-right img-fluid"
+            src="react (1).gif"
+            alt=""
+          />
+          <h3 id="#contact">React</h3>
+          <p>
+            Just trying to complete . As it is a good and important part for full stack developer.
+          </p>
+        </div>
+        <div class="skill-row white-text" data-aos="fade-right">
+          <img
+            class="icon-circle img-float-left img-fluid"
+            src="python.gif"
+            alt=""
+          />
+          <h3>Python</h3>
+          <p>
+            My favourite programming language . I've used
+            Python frameworks like Django to create AI like <strong>JARVIS 2.0</strong>.
+          </p>
+        </div>
+        <div class="skill-row white-text" data-aos="fade-left">
+          <img
+            class="icon-circle img-float-right img-fluid"
+            src="node.gif"
+            alt=""
+          />
+          <div class="div-programming-skills-node-text">
+            <h3>Node</h3>
+            <p>
+              I've used Node together with Express to create my own RESTFul API.
+              I'm working on a project where my team is helping me . I am more focusing on node js as it is a very important part in website development.
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="contact-me white-text" data-aos="flip-up">
+        <h2 id="contact" class="font-size-title">Contact</h2>
+        <h3>Let us work together.</h3>
+        <p class="contact-message">
+          You can send me an e-mail by clicking on the contact me button below
+          (😍😍😍)
+        </p>
+        <button class="button">
+          <a
+            style="text-decoration: none; color: #000000;"
+            href="mailto:biswojitpanda603@gmail.com"
+            ><span>Contact Me</span></a
+          >
+        </button>
+      </div>
+    </div>
+
+    <div class="bottom-container sexy-linear-gradient">
+      <a class="footer-link link-margin-footer" href="https://www.linkedin.com/in/biswojit-panda-913789220"
+        >LinkedIn</a
+      >
+      <a class="footer-link link-margin-footer" href="https://twitter.com/"
+        >Twitter</a
+      >
+      <a class="footer-link link-margin-footer" href="https://biswojit1821.github.io/Zooks-social-media/">Website</a>
+      <p class="copyright">© 2022 Biswojit CV. All Rights Reserved.</p>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
